@@ -96,7 +96,8 @@ def sort_patients(sort_by: str = Query(..., description='Sort on the basis of he
     sorted_data = sorted(data.values(), key=lambda x: x.get(sort_by, 0), reverse=sort_order)
 
     return sorted_data
-#if you want to ceate th epatient 
+
+#if you want to Create the new patient 
 
 @app.post('/create')
 def create_patient(patient: Patient):
